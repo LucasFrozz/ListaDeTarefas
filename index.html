@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href="https://cdn.pixabay.com/photo/2024/02/10/15/03/flowers-8564949_1280.png">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+
+</head>
+
+<body>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+
+
+    <h1>Lista de Tarefas</h1>
+    <input type="text" id="taskInput" placeholder="Digite uma tarefa">
+
+    <button onclick="addTask()">Adicionar Tarefa</button>
+    <ul id="taskList">
+    </ul>
+
+    <script>
+
+        function addTask() {
+            var taskInput = document.getElementById("taskInput");
+            var taskText = taskInput.value.trim();
+
+
+            if (taskText !== "") {
+                var taskList = document.getElementById("taskList");
+                var li = document.createElement("li");
+                li.className = "taskItem";
+                li.innerHTML = taskText + '<button onclick= "removeTask(this)">Remover</button>';
+                taskList.appendChild(li);
+                taskInput.value = "";
+            } else {
+                alert("Por favor, insira uma tarefa válida.");
+            }
+        }
+
+        function removeTask(button) {
+            var li = button.parentNode;
+            var ul = li.parentNode;
+            ul.removeChild(li);
+        }
+
+        document.getElementById("taskInput").addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                addTask();
+            }
+        });
+
+
+    </script>
+
+    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjk4cTdzcDFibGFweTZqOWIxdWc0ZnNmNjFjN3VxcTI3ejNkZHR4aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2vVQMWOVoK9zjDfoxv/giphy.gif"
+        alt="">
+
+    <footer>Desenvolvido por FROZ <br> Programação WEB|IOS <br> @IamFROZ_</footer>
+
+</body>
+
+</html>

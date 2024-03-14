@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #141414;
+    color: #ce1446;
+}
+
+button{
+border: solid black 2px;
+border-radius: 4px;
+font-size: 30px;
+text-shadow: white 3px 3px 1px;
+font-family: "Sedgwick Ave Display", cursive;
+border-radius: 30px;
+box-shadow: 3px 3px 3px rgb(230, 8, 100);
+}
+
+h1{
+    font-size: 70px;
+    text-shadow: white 3px 3px 1px;
+    font-family: "Sedgwick Ave Display", cursive;
+}
+
+img{
+    width:300px ;
+    height:300px ;
+    border: solid 5px ;
+    border-radius: 30px;
+    box-shadow: 4px 4px 4px rgb(230, 8, 100);
+}
+
+#taskInput {
+    width: 20%;
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-shadow: rgb(0, 0, 0) 1px 1px 1px;
+    color: rgb(255, 255, 255);
+    background-color: #ce1446;
+    font-family: "Sedgwick Ave Display", cursive;
+    padding-left: 5%;
+    border-radius: 30px;
+    box-shadow: 4px 4px 4px rgb(230, 8, 100);
+    background-color:  #ce1446;
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+    font-family: "Sedgwick Ave Display", cursive;
+    text-shadow: rgb(255, 255, 255) 1px 1px 1px;
+    font-size: 30px;
+}
+
+.taskItem {
+    margin-bottom: 5px;
+}
+
+.taskItem button {
+    margin-left: 5px;
+    
+}
+
+
+footer{
+    margin-top: -3%;
+    font-size: 20px;
+    text-shadow: white 1px 1px 1px;
+    font-family: "Sedgwick Ave Display", cursive;
+margin-left: 75%;
+}
+
